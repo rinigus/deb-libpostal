@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- --datadir=/usr/share/libpostal/data --disable-data-download
+
+override_dh_auto_test:
+	echo "Checks disabled since we don't download data files as a part of the build"
+

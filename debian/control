@@ -1,0 +1,23 @@
+Source: libpostal
+Priority: optional
+Maintainer: Rinigus <rinigus.git@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Section: libs
+Homepage: https://github.com/openvenues/libpostal
+
+Package: libpostal-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libpostal (= ${binary:Version}), ${misc:Depends}
+Description: Development package of libpostal
+ A C library for parsing/normalizing street addresses around the world.
+
+Package: libpostal
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A C library for parsing/normalizing street addresses around the world
+ A C library for parsing/normalizing street addresses around the world. Powered by statistical NLP and open geo data.
+
